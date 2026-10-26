@@ -1,0 +1,36 @@
+[project]
+name = "demo-api"
+version = "1.4.0"
+
+[[check]]
+type = "file_exists"
+path = "Dockerfile"
+name = "Dockerfile is present"
+
+[[check]]
+type = "dockerfile_user"
+path = "Dockerfile"
+name = "container does not run as root"
+
+[[check]]
+type = "changelog_entry"
+path = "CHANGELOG.md"
+version = "1.4.0"
+name = "changelog documents 1.4.0"
+
+[[check]]
+type = "version_match"
+path = "CHANGELOG.md"
+version = "1.4.0"
+name = "version matches the changelog"
+
+[[check]]
+type = "env_present"
+vars = ["DEMO_DATABASE_URL"]
+severity = "warning"
+name = "runtime configuration is set"
+
+[[check]]
+type = "command"
+command = 'python -c "print(1)"'
+name = "smoke command exits cleanly"
