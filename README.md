@@ -8,11 +8,13 @@ container not running as root, smoke command passing — and prints a single tab
 plus a CI-friendly exit code. No agents, no API keys, no YAML schema.
 
 [![CI](https://github.com/abubakarsiddique360/ShipGate/actions/workflows/ci.yml/badge.svg)](https://github.com/abubakarsiddique360/ShipGate/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/python-3.10%20%7C%203.12-blue)](pyproject.toml)
+[![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](pyproject.toml)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen)](pyproject.toml)
 
 ## Quick start
+
+Requires Python 3.11 or newer ? `shipgate.toml` is parsed with the standard library `tomllib`.
 
 ```bash
 git clone https://github.com/abubakarsiddique360/ShipGate.git
